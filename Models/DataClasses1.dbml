@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dinner" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=KTP-DT-LM33;Initial Catalog=dinner;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="dinnerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dinners" Member="Dinners">
+    <Type Name="Dinner">
+      <Column Name="DinnerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EventDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HostedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Country" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Longitude" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Dinner_RSVP" Member="RSVPs" ThisKey="DinnerID" OtherKey="DinnerID" Type="RSVP" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RSVP" Member="RSVPs">
+    <Type Name="RSVP">
+      <Column Name="RsvpID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DinnerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AttendeeName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Dinner_RSVP" Member="Dinner" ThisKey="DinnerID" OtherKey="DinnerID" Type="Dinner" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
