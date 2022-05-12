@@ -129,6 +129,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\bookingController.cs" />
     <Compile Include="Controllers\BuildController.cs" />
     <Compile Include="Controllers\dinnerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -140,7 +141,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Models\DataClasses2.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\dinnerrep.cs" />
+    <Compile Include="Models\loginrep.cs" />
     <Compile Include="Models\logintable.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -159,6 +166,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\submitactionrep.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -197,6 +205,14 @@
     <None Include="Models\DataClasses1.dbml.layout">
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </None>
+    <Content Include="Models\DataClasses2.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses2.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Models\DataClasses2.dbml.layout">
+      <DependentUpon>DataClasses2.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -224,15 +240,26 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Build\Index.cshtml" />
     <Content Include="Views\Build\signin.cshtml" />
-    <Content Include="Views\Build\login.cshtml" />
     <Content Include="Views\dinner\create.cshtml" />
     <Content Include="Views\dinner\list.cshtml" />
     <Content Include="Views\dinner\delete.cshtml" />
     <Content Include="Views\dinner\update.cshtml" />
+    <Content Include="Views\Build\err.cshtml" />
+    <Content Include="Views\Build\emp.cshtml" />
+    <Content Include="Views\Build\b.cshtml" />
+    <Content Include="Views\Build\create.cshtml" />
+    <Content Include="Views\Build\delete.cshtml" />
+    <Content Include="Views\Build\update.cshtml" />
+    <Content Include="Views\Build\viewdetails.cshtml" />
+    <Content Include="Views\Build\login.cshtml" />
+    <Content Include="Views\Build\er.cshtml" />
+    <Content Include="Views\booking\book.cshtml" />
     <Content Include="Views\dinner\viewdetails.cshtml" />
+    <Content Include="Views\Build\ab.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\submitaction\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

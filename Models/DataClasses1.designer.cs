@@ -83,7 +83,10 @@ namespace registerapp.Models
 				return this.GetTable<RSVP>();
 			}
 		}
-	}
+
+        public object BookedUser { get; internal set; }
+        public object BookedUsers { get; internal set; }
+    }
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Dinners")]
 	public partial class Dinner : INotifyPropertyChanging, INotifyPropertyChanged

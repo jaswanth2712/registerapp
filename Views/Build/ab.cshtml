@@ -1,14 +1,13 @@
 ﻿@model IEnumerable<registerapp.Models.Dinner>
 
 @{
-    ViewBag.Title = "list";
+    ViewBag.Title = "ab";
 }
 
-<h2>list of dinner bookings</h2>
-
+<h2>ab</h2>
 
 <p>
-    @Html.ActionLink("Create New", "create")
+    @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
@@ -72,10 +71,9 @@
             @Html.DisplayFor(modelItem => item.Longitude)
         </td>
         <td>
-            @Html.ActionLink("Edit", "update", new { id=item.DinnerID }) |
-            @Html.ActionLink("Details", "viewdetails", new { id=item.DinnerID }) |
-            @Html.ActionLink("Delete", "delete", new { id=item.DinnerID })|
-            
+            @Html.ActionLink("Edit", "Edit", new { id=item.DinnerID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DinnerID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DinnerID })
         </td>
     </tr>
 }

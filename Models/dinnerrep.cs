@@ -13,10 +13,10 @@ namespace registerapp.Models
             return db.Dinners;
         }
 
-        public IQueryable<Dinner> FindUpcomingDinners()
+        public IQueryable<Dinner> FindUpcomingDinners(string name)
         {
             return from dinner in db.Dinners
-                   where dinner.EventDate > DateTime.Now
+                   where dinner.HostedBy==name
                    orderby dinner.EventDate
                    select dinner;
         }

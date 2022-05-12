@@ -23,7 +23,10 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("list", "list", "dinner")</li>
+                    <li>@Html.ActionLink("Dinnerlist", "list", "dinner")</li>
+                    <li>@Html.ActionLink("userslist", "Index", "Build")</li>
+                    <li>@Html.ActionLink("Admin", "emp", "Build")</li>
+
                 </ul>
                 <ul class="nav navbar-nav" style="float:right !important">
                     @if (Session["Username"] != null)
@@ -51,5 +54,6 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>

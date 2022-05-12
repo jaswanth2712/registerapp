@@ -11,24 +11,18 @@ namespace registerapp.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
     public partial class logintable
     {
         public int ID { get; set; }
-        [Required(ErrorMessage = "Username is required")]
-        [Display(Name = "Username")]
+       [DisplayName("username")]
         public string Mail { get; set; }
-        [Required(ErrorMessage = "Password is required")]
-        [Display(Name = "Password")]
-        [DataType(DataType.Password)]
+       
         public string Password { get; set; }
-        [Required(ErrorMessage = "RePassword is required")]
-        [Display(Name = "RePassword")]
-        [DataType(DataType.Password)]
-        [NotMapped]
-        [Compare("Password", ErrorMessage = "Confirm password doesn't match,try again!")]
-        public string RePassword { get; set; }
+      
+
     }
 }

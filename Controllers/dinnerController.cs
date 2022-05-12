@@ -36,6 +36,7 @@ namespace registerapp.Controllers
             // Persist Changes
             dp.Save();
             return View();
+
         }
         public ActionResult list()
         {
